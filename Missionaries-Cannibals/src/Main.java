@@ -44,7 +44,7 @@ public class Main {
             {
                 item.print();
             }
-            System.out.println("\nSearch time:" + (double)(end - start) / 1000 + " seconds");  // total time of searching in seconds
+            System.out.println("\nSearch time: " + (double)(end - start) / 1000 + " seconds");  // total time of searching in seconds
             System.out.println("\nFinal Crossings: " + originalCrossingsScore);
             if (originalCrossingsScore >= crossings) System.out.println("\nFail to find a solution with less crossings than given ( " + crossings + " )");
         }
