@@ -4,7 +4,7 @@
 
 ---
 
-##*Generalized problem of the eight queens  so that the size of the chessboard is NxN.*
+*Generalized problem of the eight queens  so that the size of the chessboard is NxN.*
 
 ---
 
@@ -30,6 +30,6 @@ Chromosome solution = algorithm.run(numberOfQueens, populationSize, mutationProb
 
 ---
 
-##Enjoy
+*Enjoy*
 
 ---
