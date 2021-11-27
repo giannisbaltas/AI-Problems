@@ -13,9 +13,8 @@ public class Main
             // (n-1) + (n-2) + ... + (n-n)
             minFitness += (numberOfQueens - i);
         }
-        System.out.println("- Chromosome's Fitness for the solution must be great or equal than " + minFitness + ".");
-        System.out.println("- The final chromosome depends on the number of repetitions of reproduction.");
-        System.out.println("- If chromosome's fitness is less than " + minFitness + ", the chromosome returned is the best of the last reproduction.");
+        System.out.println("- Chromosome's Fitness Score for this solution must be great or equal than " + minFitness + ".");
+        System.out.println("- If the returned chromosome has Fitness Score less than " + minFitness + ", is the best of the last generation.");
         GeneticAlgorithm algorithm = new GeneticAlgorithm();
         long start = System.currentTimeMillis();
         Chromosome solution = algorithm.run(numberOfQueens,1000, 0.05, 1000, minFitness);
