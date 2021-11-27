@@ -18,7 +18,7 @@ public class Main
         System.out.println("- If chromosome's fitness is less than " + minFitness + ", the chromosome returned is the best of the last reproduction.");
         GeneticAlgorithm algorithm = new GeneticAlgorithm();
         long start = System.currentTimeMillis();
-        Chromosome solution = algorithm.run(numberOfQueens,1000, 0.05, 500, minFitness);
+        Chromosome solution = algorithm.run(numberOfQueens,1000, 0.05, 1000, minFitness);
         long end = System.currentTimeMillis();
         solution.print();
         System.out.println("\nSearch time: " + (double)(end - start) / 1000 + " seconds");
