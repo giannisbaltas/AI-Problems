@@ -13,10 +13,10 @@ public class GeneticAlgorithm
         this.occurrences = null;
     }
 
-    Chromosome run(int multitude, int populationSize, double mutationProbability, int maxSteps, int minFitness)
+    Chromosome run(int multitudeOfGenes, int populationSize, double mutationProbability, int maxSteps, int minFitness)
     {
         //We initialize the population
-        this.initializePopulation(multitude, populationSize);
+        this.initializePopulation(multitudeOfGenes, populationSize);
 
         Random r = new Random();
 
@@ -32,24 +32,22 @@ public class GeneticAlgorithm
                 int xIndex;
                 int yIndex;
                 Chromosome xParent;
-                if (multitude >= 3){
+                if (multitudeOfGenes >= 3){
                     xIndex = this.occurrences.get(r.nextInt(this.occurrences.size()));
                     xParent = this.population.get(xIndex);
                     yIndex = this.occurrences.get(r.nextInt(this.occurrences.size()));
+                    while(xIndex == yIndex)
+                    {
+                        yIndex = this.occurrences.get(r.nextInt(this.occurrences.size()));
+                    }
                 }else{
-                    xIndex = multitude/2;
+                    xIndex = multitudeOfGenes/2;
                     xParent = this.population.get(xIndex);
-                    yIndex = multitude/2;
+                    yIndex = multitudeOfGenes/2;
                 }
-
-                while(xIndex == yIndex)
-                {
-                    yIndex = this.occurrences.get(r.nextInt(this.occurrences.size()));
-                }
-
                 Chromosome yParent = this.population.get(yIndex);
                 //We generate the children of the two chromosomes
-                Chromosome[] children = this.reproduce(multitude, xParent, yParent);
+                Chromosome[] children = this.reproduce(multitudeOfGenes, xParent, yParent);
 
                 //We might then mutate the children
                 if(r.nextDouble() < mutationProbability)

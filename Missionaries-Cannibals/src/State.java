@@ -121,9 +121,14 @@ public class State implements Comparable<State>{
     }
 
     private void heuristic(){
-        if (boatCapacity > 2)
-            this.score = g + Math.round(2 * (missionariesLeft + cannibalsLeft) / (float)(boatCapacity - 1));
-
+        if (boatCapacity > 2) {
+            if ((missionariesLeft + cannibalsLeft) <= boatCapacity) {
+                this.score = g + 1; // one crossing if persons on the left side are leq than boat capacity
+            }
+            else {
+                this.score = g + Math.round(2 * (missionariesLeft + cannibalsLeft) / (float) (boatCapacity - 1) - 1);
+            }
+        }
         if (boatCapacity == 2) this.score = g + 2 * (missionariesLeft + cannibalsLeft) - 3;
     }
 
