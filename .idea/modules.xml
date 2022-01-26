@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AI-Problems.iml" filepath="$PROJECT_DIR$/.idea/AI-Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Missionaries-Cannibals/Missionaries-Cannibals.iml" filepath="$PROJECT_DIR$/Missionaries-Cannibals/Missionaries-Cannibals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/N-Queens/N-Queens.iml" filepath="$PROJECT_DIR$/N-Queens/N-Queens.iml" />
+    </modules>
+  </component>
+</project>

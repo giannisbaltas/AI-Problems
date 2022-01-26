@@ -16,4 +16,8 @@ maxSteps (default=1000) = repetitions of reproduction.
 
 Chromosome solution = algorithm.run(numberOfQueens, populationSize, mutationProbability, maxSteps, minFitness);
  
+<<<<<<< HEAD
+=======
+
+>>>>>>> 115ba209258680945c68df17a670ff1577f5cab5
 Enjoy
